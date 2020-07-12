@@ -1,0 +1,93 @@
+header {
+  @include display-center(center, space-between);
+  background-color: $s-color;
+  padding: 40px 40px;
+  .logo {
+    @include display-center(center, space-around);
+    color: $big-color;
+    font-size: 1.6rem;
+    font-weight: 300;
+    &-div {
+      @include display-center(center, center);
+      width: 40px;
+      height: 40px;
+      background-color: $p-color;
+      font-weight: 600;
+      font-size: 1.4rem;
+      border-radius: 50%;
+      text-align: center;
+      margin-right: 10px;
+    }
+
+    &-txt {
+      span {
+        font-weight: 500;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .menu {
+    &-list {
+      list-style: none;
+      & > li {
+        position: relative;
+        display: inline-block;
+        margin-right:40px;
+      }
+      &__item {
+          font-size: .9rem;
+        
+        i{
+            line-height: 0;
+            font-size: .8rem;
+        }
+        &:hover {
+          color: $big-color;
+        }
+        &:hover + ul{
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        &.active {
+          color: $big-color;
+        }
+      }
+
+      &-sub {
+          display: block;
+        // @include display-center;
+        @include transition;
+        width: auto;
+        max-width: none;
+        position: absolute;
+        top: 35px;
+        left: -15px;
+        list-style: none;
+        background-color: $s-2-color;
+        font-size: 0.9rem;
+        flex-direction: column;
+        padding: 10px 20px;
+        border-radius: 10px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(30px);
+        &:hover{
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        &__item{
+            margin-bottom: 10px;
+            // padding: 15px 0px;
+            display: block;
+            width: max-content;
+            &:hover{
+                color: $big-color;
+            }
+        }
+      }
+    }
+  }
+}

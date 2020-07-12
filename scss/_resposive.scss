@@ -1,0 +1,211 @@
+@include media($breakpoint-xl) {
+  .home {
+    &-content {
+      margin-left: 0;
+      padding-left: 0;
+      margin-right: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+@include media($breakpoint-lg) {
+  .overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 4;
+    &.open {
+      display: block;
+    }
+  }
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    padding: 20px 20px;
+    background-color: $s-color;
+    z-index: 5;
+    .navBtn {
+      display: block;
+      @include display-center;
+      width: 40px;
+      height: 40px;
+      border: 1px solid $big-color;
+      margin-left: auto;
+      margin-bottom: 10px;
+      z-index: 6;
+      padding: 5px;
+      flex-direction: column;
+      span {
+        @include transition;
+        display: block;
+        background-color: $big-color;
+        width: 100%;
+        height: 3px;
+        margin: 3px 0;
+      }
+
+      &.open {
+        position: fixed;
+        right: 20px;
+        top: 20px;
+        flex-direction: row;
+        span {
+          width: 3px;
+          height: 100%;
+          margin: 0 3px;
+        }
+      }
+    }
+
+    .menu {
+      @include transition;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 300px;
+      height: 100vh;
+      background-color: $s-color;
+      padding: 30px 10px;
+      padding-top: 90px;
+      z-index: 5;
+      transform: translateX(100%);
+
+      &.open {
+        transform: translateX(0);
+      }
+      &-list {
+        & > li {
+          display: block;
+          margin-bottom: 20px;
+          margin-right: 0;
+        }
+        &__item {
+          font-size: 1.2rem;
+          @include display-center(center, space-between);
+        }
+        &-sub {
+          position: static;
+          top: 0;
+          left: 0;
+          visibility: visible;
+          opacity: 1;
+          height: 0;
+          overflow: hidden;
+          padding: 0;
+          clear: both;
+          transform: translateY(0);
+          background-color: transparent;
+          &.open {
+            height: fit-content;
+            padding: 12px 0px 0px 20px;
+          }
+        }
+      }
+    }
+  }
+  .home-content--right {
+    p {
+      padding-right: 0;
+    }
+  }
+
+  .works-list {
+    grid-template-columns: 1fr 1fr;
+  }
+  .page-con {
+    padding: 0px 40px !important;
+  }
+  .page-header {
+    margin-top: 90px;
+    span {
+      position: relative !important;
+      right: 0 !important;
+      top: 0 !important;
+    }
+  }
+}
+
+@include media($breakpoint-md) {
+  .home-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .funfacts-content {
+    grid-template-columns: 1fr;
+  }
+  .pricing-content {
+    grid-template-columns: 1fr;
+  }
+
+  .blogs-list {
+    grid-template-columns: 1fr;
+  }
+
+  .contact {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    flex-direction: column;
+    ul {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@include media(699px) {
+  .certificates-list {
+    grid-template-columns: 1fr;
+  }
+}
+@include media($breakpoint-sm) {
+  .home-content--left__img {
+    width: 60vw;
+    height: 60vw;
+  }
+  .btn-right,
+  .btn-left {
+    display: block;
+    margin-top: 12px !important;
+  }
+  .img {
+    width: 50vw !important;
+    height: 50vw !important;
+  }
+  .services-content {
+    grid-template-columns: 1fr;
+  }
+
+  .qualifications {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-list {
+    grid-template-columns: 1fr;
+  }
+  .works-list {
+    grid-template-columns: 1fr;
+  }
+  .page-header {
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+  }
+  .form-group__top{
+    grid-template-columns: 1fr !important;
+    padding-bottom: 20px;
+  }
+}
+
+@include media(350px) {
+  .certificate_img {
+    flex: 2 !important;
+  }
+}

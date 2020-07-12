@@ -1,0 +1,16 @@
+.clients{
+    &-content{
+        .slider{
+            
+        }
+    }
+
+    .slider-item{
+        @include display-center;
+        margin: 10px 10px;
+
+        img{
+            width: 35%;
+        }
+    }
+}

@@ -1,0 +1,48 @@
+.qualifications{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding-bottom: 40px;
+    .items{
+
+        &--item{
+            position: relative;
+            color: $big-color;
+            padding: 25px 25px;
+            border-left: 1px solid $s-2-color;
+            padding-top: 0px;
+            padding-right: 0px;
+            .time{
+                position: relative;
+                top: 0px;
+                left: -45px;
+                padding: 15px 0;
+                color: $small-color;
+                .year{
+                    padding: 5px 15px;
+                    font-size: .8rem;
+                    border: 2px solid $p-color;
+                    border-radius: 15px;
+                    background-color: $s-color;
+                    margin-right: 5px;
+                }
+                .university{
+                    color: $unfocused-color;
+                    font-size: .75rem;
+                }
+            }
+
+            .title{
+                font-weight: 700;
+                font-size: 1rem;
+                line-height: 2;
+            }
+            p{
+                font-size: .8rem;
+                font-weight: 400;
+                color: $small-color;
+            }
+
+        }
+    }
+}

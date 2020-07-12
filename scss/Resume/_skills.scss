@@ -1,0 +1,53 @@
+.skills{
+    padding-bottom: 20px;
+    &-list{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+
+        .skill{
+            width: 100%;
+            margin-bottom: 15px;
+            &-name{
+                font-size: .9rem;
+                font-weight: 600;
+                color: $small-color;
+                margin-bottom: 5px;
+            }
+
+            &-progressbar{
+                position: relative;
+                width: 100%;
+                height: 10px;
+                border: 2px solid $s-2-color;
+                border-radius: 15px;
+                .progress{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    background-color: $p-color;
+                    border-radius: 15px;
+                }
+                &::before{
+                    position: absolute;
+                    top: -22px;
+                    right: 0;
+                    color: $unfocused-color;
+                    font-weight: 500;
+                    font-size: .8rem;
+                }
+                @for $i from 1 through 100{
+                    &[data-rate="#{$i}"]{
+                        &::before{
+                            content: '#{$i + '%'}';
+                        }
+                        .progress{
+                            width: #{$i + '%'};
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

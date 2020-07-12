@@ -1,0 +1,97 @@
+.pricing {
+  padding-bottom: 30px;
+
+  &-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: auto;
+    gap: 2rem;
+
+    &--wrap {
+      @include transition;
+      background-color: $s-3-color;
+      padding: 40px;
+      border: 2px solid $s-2-color;
+      border-radius: 15px;
+      text-align: center;
+      color: $big-color;
+
+      &:hover {
+        box-shadow: 0 0 24px rgba(255, 255, 255, 0.14) !important;
+        transform: translateY(-10px) !important;
+      }
+      .type {
+        color: $small-color;
+        margin-bottom: 20px;
+      }
+      .amount {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+
+        sub {
+          font-size: 1rem;
+          color: $small-color;
+        }
+      }
+
+      .btn-div {
+        margin-bottom: 40px;
+        .btn {
+          @include transition;
+          padding: 7px 20px;
+          border: 2px solid $small-color;
+          border-radius: 20px;
+          color: $small-color;
+          box-shadow: 0 10px 10px -8px rgba(0, 0, 0, 0.78);
+
+          &:hover {
+            background-color: $small-color;
+            color: $s-3-color;
+          }
+        }
+      }
+
+      .services-list {
+        list-style: none;
+        color: $small-color;
+        font-size: 0.9rem;
+        .service {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    &--wrap.selected {
+        transform: translateY(-6px);
+        box-shadow: 0 0 12px rgba(255, 255, 255, 0.14);
+          border-color: #666;
+        .type{
+            position: relative;
+            color: $big-color;
+            &::before{
+                position: absolute;
+                content: '';
+                bottom: -5px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 30px;
+                height: 2px;
+                background-color: $p-color;
+            }
+        }
+      }
+
+    &--wrap.recommanded {
+        .btn{
+            border-color: $p-color;
+
+            &:hover{
+                background-color: $p-color;
+                color: $big-color;
+            }
+        }
+    }
+   
+
+  }
+}

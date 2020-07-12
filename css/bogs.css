@@ -1,0 +1,21 @@
+.blogs-list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto;
+  gap: 2rem;
+}
+
+.blogs-list__item {
+  position: relative;
+}
+
+.blogs-list__item .image_link a > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/*# sourceMappingURL=bogs.css.map */

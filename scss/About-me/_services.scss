@@ -1,0 +1,34 @@
+.services {
+    padding-bottom: 30px;
+  &-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+
+    &__service {
+      display: flex;
+
+      .icon {
+        font-size: 2rem;
+        margin: 10px 25px 0px 0px;
+        color: $p-color;
+      }
+
+      .text {
+        color: $small-color;
+
+        h2 {
+          font-size: 1.1rem;
+          color: $big-color;
+          line-height: 3;
+          font-weight: 500;
+        }
+        P {
+          font-size: 0.8rem;
+          line-height: 1.8;
+          letter-spacing: 2;
+        }
+      }
+    }
+  }
+}

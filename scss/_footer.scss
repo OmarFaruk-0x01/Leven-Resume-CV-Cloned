@@ -1,0 +1,26 @@
+footer{
+    @include display-center(center, space-between);
+    border-top: 1px solid $s-2-color;
+    padding: 10px 0;
+    background-color: $s-color;
+    color: $small-color;
+    ul{
+        display: flex;
+        list-style: none;
+
+        a{
+            font-size: .8rem;
+            margin: 10px 20px;
+
+            &:hover{
+                color: $small-color;
+            }
+        }
+    }
+
+    span{
+        font-size: .9rem;
+        padding-right: 10px;
+        font-weight: 300;
+    }
+}

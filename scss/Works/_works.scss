@@ -1,0 +1,131 @@
+.filter {
+  margin-bottom: 50px;
+  width: 100%;
+  ul {
+    list-style-type: none;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &-btn {
+    margin: 0px 5px;
+
+    &.active,
+    &:hover {
+      a {
+        color: $small-color;
+      }
+    }
+  }
+}
+
+.works-list {
+    @include transition;
+    position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 231px;
+  gap: 2rem;
+  width: 100%;
+  min-height: 40vh;
+    padding-bottom: 30px;
+  &__item {
+      @include transition(.5s);
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    transform-origin: 50% 50%;
+    visibility: visible;
+    .title {
+      position: absolute;
+      width: fit-content;
+      height: fit-content;
+      top: 10px;
+      left: 10px;
+      background-color: $s-color;
+      padding: 4px 9px;
+      font-size: 0.8rem;
+      color: $big-color;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: text;
+      z-index: 1;
+    }
+
+    a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      &:hover {
+        img {
+          transform: scale(1.2);
+        }
+        .details {
+          opacity: 1;
+        }
+      }
+
+      img {
+          @include transition;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .details {
+        @include transition;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        @include display-center(center, space-between);
+        padding: 10px 20px;
+        font-size: 0.75rem;
+        opacity: 0;
+        span {
+          width: fit-content;
+          padding: 3px 8px;
+          background-color: $s-color;
+          border-radius: 5px;
+        }
+        span:nth-child(2) {
+          font-size: 1rem;
+          color: $p-color;
+        }
+      }
+    }
+  }
+}
+
+
+.hide{
+    width: 0;
+    height: 0;
+    // position: absolute;
+    transform: scale3d(0.001,.001,1);
+    visibility: hidden;
+    animation: check .01s linear forwards;
+    animation-delay: 0s;
+    opacity: 0;
+
+}
+
+@keyframes check{
+    from{
+        position: relative;
+
+    }
+    to{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}

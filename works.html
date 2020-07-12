@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leven-Resume</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- <link rel="stylesheet" href="plugin/owl-carousel/assets/owl.carousel.css" /> -->
+    <link
+      rel="stylesheet"
+      href="plugin/owl-carousel/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="plugin/owl-carousel/assets/owl.theme.default.min.css"
+    />
+    <link rel="stylesheet" href="plugin/linecons/style.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script
+      src="https://kit.fontawesome.com/f9fadaad2e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="preloader">
+      <span></span>
+    </div>
+    <div class="overlay"></div>
+    <header>
+      <div class="logo">
+        <div class="logo-div">A</div>
+        <div class="logo-txt"><span>Alex</span>smith</div>
+      </div>
+      <div class="navBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="menu">
+        <ul class="menu-list">
+          <li>
+            <a href="index.html" class="menu-list__item"
+              >About Me <i class="fas fa-chevron-down"></i
+            ></a>
+            <ul class="menu-list-sub">
+              <li>
+                <a href="" class="menu-list-sub__item">About-One</a>
+              </li>
+              <li>
+                <a href="" class="menu-list-sub__item">About-One</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="resume.html" class="menu-list__item">Resume</a>
+          </li>
+          <li>
+            <a href="works.html" class="menu-list__item active">Works</a>
+          </li>
+          <li>
+            <a href="blogs.html" class="menu-list__item">Blogs</a>
+          </li>
+          <li>
+            <a href="contact.html" class="menu-list__item">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="page">
+        <div class="page-header">
+            <h2>Works</h2>
+            <span>My Works</span>
+        </div>
+        <div class="page-con">
+            <div class="filter">
+                <ul>
+                    <li class="filter-btn active"><a href="#" data-type="all">All</a></li>
+                    <li class="filter-btn"><a href="#" data-type="details">Detailed</a></li>
+                    <li class="filter-btn"><a href="#" data-type="url">Direct URL</a></li>
+                    <li class="filter-btn"><a href="#" data-type="image">Image</a></li>
+                    <li class="filter-btn"><a href="#" data-type="soundcloude">SoundCloude</a></li>
+                    <li class="filter-btn"><a href="#" data-type="video">Video</a></li>
+                    <li class="filter-btn"><a href="#" data-type="vimovideo">Vimeo Video</a></li>
+                    <li class="filter-btn"><a href="#" data-type="youtubevideo">Youtube Video</a></li>
+                </ul>
+            </div>
+
+            <div class="works-list">
+                <figure class="works-list__item" data-type='["all", "details"]'>
+                    <div class="title">Full Project 2</div>
+                    <a href="#">
+                        <img src="imgs/1.jpg" alt="Works">
+                        <div class="details">
+                            <span>Detailed</span>
+                            <span><i class="fa fa-file-alt"></i></span>
+                        </div>
+                    </a>
+                </figure>
+                <figure class="works-list__item" data-type='["all", "youtubevideo"]'>
+                    <div class="title">Youtube Video 2</div>
+                    <a href="#">
+                        <img src="imgs/2.jpg" alt="Works">
+                        <div class="details">
+                            <span>YouTube</span>
+                            <span><i class="fab fa-youtube"></i></span>
+                        </div>
+                    </a>
+                </figure>
+                <figure class="works-list__item" data-type='["all", "image"]'>
+                    <div class="title">Image 2</div>
+                    <a href="#">
+                        <img src="imgs/3.jpg" alt="Works">
+                        <div class="details">
+                            <span>Image</span>
+                            <span><i class="fa fa-image"></i></span>
+                        </div>
+                    </a>
+                </figure>
+                <figure class="works-list__item" data-type='["all", "soundcloude"]'>
+                    <div class="title">SoundCloud Audio 1</div>
+                    <a href="#">
+                        <img src="imgs/4.jpg" alt="Works">
+                        <div class="details">
+                            <span>SoundCloud</span>
+                            <span><i class="fas fa-volume-up"></i></span>
+                        </div>
+                    </a>
+                </figure>
+                <figure class="works-list__item" data-type='["all", "youtubevideo"]'>
+                    <div class="title">YouTube Video 1</div>
+                    <a href="#">
+                        <img src="imgs/5.jpg" alt="Works">
+                        <div class="details">
+                            <span>YouTube</span>
+                            <span><i class="fab fa-youtube"></i></span>
+                        </div>
+                    </a>
+                </figure>
+                <figure class="works-list__item" data-type='["all", "vimovideo"]'>
+                    <div class="title">Vimeo Video</div>
+                    <a href="#">
+                        <img src="imgs/6.jpg" alt="Works">
+                        <div class="details">
+                            <span>Vimeo Video</span>
+                            <span><i class="fab fa-vimeo-v"></i></span>
+                        </div>
+                    </a>
+                </figure>
+                <figure class="works-list__item" data-type='["all", "details"]'>
+                    <div class="title">Full Project 1</div>
+                    <a href="#">
+                        <img src="imgs/7.jpg" alt="Works">
+                        <div class="details">
+                            <span>Detailed</span>
+                            <span><i class="fa fa-file-alt"></i></span>
+                        </div>
+                    </a>
+                </figure>
+                <figure class="works-list__item" data-type='["all", "image"]'>
+                    <div class="title">Iamge 2</div>
+                    <a href="#">
+                        <img src="imgs/8.jpg" alt="Works">
+                        <div class="details">
+                            <span>Image</span>
+                            <span><i class="fa fa-image"></i></span>
+                        </div>
+                    </a>
+                </figure>
+                <figure class="works-list__item" data-type='["all", "url"]'>
+                    <div class="title">Direct URL</div>
+                    <a href="#">
+                        <img src="imgs/9.jpg" alt="Works">
+                        <div class="details">
+                            <span>URL</span>
+                            <span><i class="fa fa-link"></i></span>
+                        </div>
+                    </a>
+                </figure>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+      <div class="social">
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </div>
+
+      <span>&copy; 2020 All rights reserved. LMPixels.</span>
+    </footer>
+  </body>
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="plugin/owl-carousel/owl.carousel.min.js"></script>
+  <script src="js/main.js"></script>
+</html>

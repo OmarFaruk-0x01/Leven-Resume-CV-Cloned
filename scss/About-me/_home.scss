@@ -1,0 +1,78 @@
+.home {
+  &-content {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-auto-rows: auto;
+    gap: 2rem;
+    column-gap: 3rem;
+    padding: 40px 50px;
+    margin: 5rem 40px;
+
+    &--left {
+      @include display-center;
+      &__img {
+        @include display-center;
+        width: 350px;
+        height: 350px;
+        background-color: $s-2-color;
+        border-radius: 50%;
+        border: 2px solid $s-2-color;
+        box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.8);
+        .img {
+          width: 310px;
+          height: 310px;
+          border-radius: 50%;
+          background-position: center center;
+          background-size: cover;
+        }
+      }
+    }
+
+    &--right {
+      h4 {
+        font-size: 1rem;
+        font-weight: 400;
+        color: $unfocused-color;
+        margin-bottom: 10px;
+      }
+      h2 {
+        font-size: 3.2rem;
+        font-weight: 600;
+        color: $big-color;
+        line-height: 1;
+        margin-bottom: 25px;
+      }
+      p {
+        font-size: 0.9rem;
+        font-weight: 400;
+        color: $small-color;
+        padding-right: 50px;
+      }
+      &__btns {
+        margin-top: 40px;
+      }
+      &__btn {
+        margin-right: 5px;
+        border: 2px solid;
+        padding: 7px 20px;
+        border-radius: 20px;
+        background-color: $s-2-color;
+        color: $big-color;
+        @include transition;
+
+        &:hover{
+            background-color: $small-color;
+            color: $s-color;
+        }
+        &.btn-left {
+            border-color: $p-color;
+
+            &:hover{
+                background-color: $p-color;
+                color: $big-color;
+            }
+        }
+      }
+    }
+  }
+}

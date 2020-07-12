@@ -1,0 +1,92 @@
+.blogs-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto;
+  gap: 2rem;
+  min-height: 50vh;
+  &__item {
+    position: relative;
+    // display: flex;
+    // flex-direction: column;
+    border-radius: 15px;
+    .header {
+      position: absolute;
+      z-index: 2;
+      padding: 3px 8px;
+      background-color: $s-color;
+      top: 10px;
+      left: 10px;
+      color: $big-color;
+      font-weight: 500;
+      font-size: 0.7rem;
+      border-radius: 10px;
+    }
+    .image_link {
+      position: relative;
+      height: 300px;
+      a {
+        border-radius: 15px;
+        z-index: 1;
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        &:hover {
+          img {
+            transform: scale3d(1.2, 1.2, 1.2);
+          }
+        }
+        img {
+          @include transition;
+          position: absolute;
+          border-radius: 15px;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+        .icon {
+          @include transition;
+          @include display-center;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          font-size: 3rem;
+          color: $small-color;
+          z-index: 1;
+          opacity: 0;
+        }
+      }
+    }
+    .text {
+      padding: 15px 5px;
+      span {
+        color: #666;
+        font-size: 0.75rem;
+      }
+      a {
+        display: block;
+        color: $big-color;
+        font-weight: 500;
+      }
+    }
+  }
+}
+.all-btn {
+  padding:  35px 0;
+  a {
+    @include transition;
+    padding: 10px 20px;
+
+    color: $big-color;
+    border: 2px solid $p-color;
+    font-size: 0.9rem;
+    border-radius: 23px;
+
+    &:hover {
+      background-color: $p-color;
+    }
+  }
+}
